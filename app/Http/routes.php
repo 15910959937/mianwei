@@ -21,6 +21,20 @@ Route::any('collage',"weixinController@collage");
 //Route::get('/',function(){
 //    return Input::get('name');
 //});
+
+/*
+ *时庆庆
+ *2016-08-29
+ *其他功能路由
+ */
+//首页跳转
+Route::get('other_function',"OtherController@other_function");
+//手机地图
+Route::get('compamy_map',"OtherController@compamy_map");
+//进入公司地图
+Route::get("in_map","OtherController@in_map");
+
+
 Route::get('from',function(){
     return view('form');
 });

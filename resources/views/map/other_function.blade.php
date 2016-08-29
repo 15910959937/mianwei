@@ -1,9 +1,8 @@
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
         <head>
                <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<title>微官网自适应背景幻灯手机wap网站模板下载-懒人模板【http://www.lanrenmb.com/weiguanwang/】</title>
+        <title>微官网自适应背景幻灯手机wap网站模板下载-懒人模板【http://www.lanrenmb.com/weiguanwang/】</title>
         <base href="." />
         <meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -35,6 +34,7 @@
         <script src="css/106/iscroll.js" type="text/javascript"></script>
         <script type="text/javascript">
             var myScroll;
+
             function loaded() {
                 myScroll = new iScroll('wrapper', {
                     snap: true,
@@ -54,76 +54,80 @@
     </head>
     <body id="cate4">
     <!--背景音乐-->
-    		   <div class="banner">
-		<div id="wrapper">
-			<div id="scroller">
-				<ul id="thelist"> 
-								</ul>
-			</div>
-		</div>
-		<div id="nav">
-			<div id="prev" onclick="myScroll.scrollToPage('prev', 0,400,3);return false">&larr; prev</div>
-			<ul id="indicator">
-						 
-			</ul>
-			<div id="next" onclick="myScroll.scrollToPage('next', 0);return false">next &rarr;</div>
-		</div>
-		<div class="clr"></div>
-		</div>
-        <div id="insert1"></div>
-        <div>
-        <select name="zhuanye" id="zhuanye">
-             @foreach($message['zhuanye'] as $v)
-             <option value="{{$v['d_name']}}">{{$v['d_name']}}</option>
-             @endforeach
-        </select>
-        <select name="" id="c_type">
-            <option value="基础">基础</option>
-            <option value="进阶">进阶</option>
-            <option value="人资">人资</option>
-            <option value="逻辑">逻辑</option>
-        </select>
+               <div class="banner">
+        <div id="wrapper">
+            <div id="scroller">
+                <ul id="thelist"> 
+                                </ul>
+            </div>
         </div>
+        <div id="nav">
+            <div id="prev" onclick="myScroll.scrollToPage('prev', 0,400,3);return false">&larr; prev</div>
+            <ul id="indicator">
+                         
+            </ul>
+            <div id="next" onclick="myScroll.scrollToPage('next', 0);return false">next &rarr;</div>
+        </div>
+        <div class="clr"></div>
+        </div>
+        <div id="insert1"></div>
         <div id="todayList">
             <ul class="todayList">
-            @foreach($message['shiti'] as $key=>$v)
-            <li class="only4"  style="padding:10px 0 0 0">
-                        <h2>{{$key+1}}. {{$v['c_name']}}&nbsp;&nbsp;&nbsp;   </h2>
-                        <p class="onlyheight"></p>
-                        <span class="icon"></span>
+            <li class="only4" style="padding:10px 0 0 0">
+                    <a href="http://v.lanrenmb.com/index.php?g=Wap&m=Index&a=lists&classid=17&token=ieydec1420432915&wecha_id={wechat_id}">
+                        <div class="img"><img src="photo/thumb_54ad3c8c03158.png" /></div>
+                        <h2>扫码</h2>
+                        <p class="onlyheight">扫一扫关注微信公众号</p>
+                        <span class="icon">&nbsp;</span>
                         <div class="clr"></div>
-                        <div class='answer' style="display:none"><span class="onlyheight">{{$v['c_answer']}}
-
-<!-- JiaThis Button BEGIN -->
-<div class="jiathis_style" style="float:right;">
-<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank" style="float:left;"></a>
-<a class="jiathis_button_qzone" style="float:left;"></a>
-<a class="jiathis_button_tsina" style="float:left;"></a>
-<a class="jiathis_button_tqq" style="float:left;"></a>
-<a class="jiathis_button_weixin" style="float:left;"></a>
-<a class="jiathis_button_renren" style="float:left;"></a>
-<a class="jiathis_counter_style" style="float:left;"></a>
-</div>
-<script type="text/javascript" >
-var jiathis_config={
-    summary:"",
-    shortUrl:false,
-    hideMore:false
-}
-</script>
-<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
-<!-- JiaThis Button END -->
-
-                        </span>
-                        </div>
-            </li>
-                @endforeach
+                    </a>
+                </li><li class="only4" style="padding:10px 0 0 0">
+                    <a href="compamy_map">
+                        <div class="img"><img src="photo/thumb_54ad3cb664072.png" /></div>
+                        <h2>手机地图</h2>
+                        <p class="onlyheight">手机地图为你快速找到面试公司，你值得拥有！</p>
+                        <span class="icon">&nbsp;</span>
+                        <div class="clr"></div>
+                    </a>
+                </li><li class="only4" style="padding:10px 0 0 0">
+                    <a href="http://v.lanrenmb.com/index.php?g=Wap&m=Index&a=lists&classid=19&token=ieydec1420432915&wecha_id={wechat_id}">
+                        <div class="img"><img src="http://v.lanrenmb.com/uploads/i/ieydec1420432915/9/9/1/1/thumb_54ad3cc15514d.png" /></div>
+                        <h2>多合一平台建设</h2>
+                        <p class="onlyheight">PC端、手机端、微信端、APP客户端以上平台全部同步一键更新！</p>
+                        <span class="icon">&nbsp;</span>
+                        <div class="clr"></div>
+                    </a>
+                </li><li class="only4" style="padding:10px 0 0 0">
+                    <a href="http://v.lanrenmb.com/index.php?g=Wap&m=Index&a=lists&classid=20&token=ieydec1420432915&wecha_id={wechat_id}">
+                        <div class="img"><img src="photo/thumb_54ad3ccedf2b8.png" /></div>
+                        <h2>微信功能二次开发</h2>
+                        <p class="onlyheight">只有想不到功能，没有做不出来功能噢--懒人口头禅！</p>
+                        <span class="icon">&nbsp;</span>
+                        <div class="clr"></div>
+                    </a>
+                </li><li class="only4" style="padding:10px 0 0 0">
+                    <a href="http://v.lanrenmb.com/index.php?g=Wap&m=Index&a=lists&classid=21&token=ieydec1420432915&wecha_id={wechat_id}">
+                        <div class="img"><img src="photo/thumb_54ad3cdabcb1f.png" /></div>
+                        <h2>微场景定制</h2>
+                        <p class="onlyheight">懒人做场景应用喜欢个性化，非模板化，你出方案，我们来写特效！</p>
+                        <span class="icon">&nbsp;</span>
+                        <div class="clr"></div>
+                    </a>
+                </li><li class="only4" style="padding:10px 0 0 0">
+                    <a href="http://v.lanrenmb.com/index.php?g=Wap&m=Index&a=lists&classid=22&token=ieydec1420432915&wecha_id={wechat_id}">
+                        <div class="img"><img src="photo/thumb_54ad3ce678ee3.png" /></div>
+                        <h2>APP定制</h2>
+                        <p class="onlyheight">不管是原生APP还是封装，在懒人眼里，让客户说你牛就行了！</p>
+                        <span class="icon">&nbsp;</span>
+                        <div class="clr"></div>
+                    </a>
+                </li>
             </ul>
         </div>
         <script>
 
 
-            var count = document.getElementById("thelist").getElementsByTagName("img").length;	
+            var count = document.getElementById("thelist").getElementsByTagName("img").length;  
 
 
             for(i=0;i<count;i++){
@@ -152,39 +156,38 @@ var jiathis_config={
         <div style="display:none"> </div>
 
 <div class="copyright">
-© 2016 面试宝典网版权所有</div> 
+© 2015 懒人模板版权所有</div> 
 <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js" type="text/javascript"></script>
 <br>
-<br>
-<script>
+<br><script>
 function displayit(n){
-	for(i=0;i<4;i++){
-		if(i==n){
-			var id='menu_list'+n;
-			if(document.getElementById(id).style.display=='none'){
-				document.getElementById(id).style.display='';
-				document.getElementById("plug-wrap").style.display='';
-			}else{
-				document.getElementById(id).style.display='none';
-				document.getElementById("plug-wrap").style.display='none';
-			}
-		}else{
-			if($('#menu_list'+i)){
-				$('#menu_list'+i).css('display','none');
-			}
-		}
-	}
+    for(i=0;i<4;i++){
+        if(i==n){
+            var id='menu_list'+n;
+            if(document.getElementById(id).style.display=='none'){
+                document.getElementById(id).style.display='';
+                document.getElementById("plug-wrap").style.display='';
+            }else{
+                document.getElementById(id).style.display='none';
+                document.getElementById("plug-wrap").style.display='none';
+            }
+        }else{
+            if($('#menu_list'+i)){
+                $('#menu_list'+i).css('display','none');
+            }
+        }
+    }
 }
 function closeall(){
-	var count = document.getElementById("top_menu").getElementsByTagName("ul").length;
-	for(i=0;i<count;i++){
-		document.getElementById("top_menu").getElementsByTagName("ul").item(i).style.display='none';
-	}
-	document.getElementById("plug-wrap").style.display='none';
+    var count = document.getElementById("top_menu").getElementsByTagName("ul").length;
+    for(i=0;i<count;i++){
+        document.getElementById("top_menu").getElementsByTagName("ul").item(i).style.display='none';
+    }
+    document.getElementById("plug-wrap").style.display='none';
 }
 
 document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
-	WeixinJSBridge.call('hideToolbar');
+    WeixinJSBridge.call('hideToolbar');
 });
 </script> <style type="text/css">
 body { margin-bottom:60px !important; }
@@ -242,21 +245,21 @@ ul, li { list-style:none; margin:0; padding:0 }
 <div id="plug-wrap" onclick="closeall()" style="display: none;"></div> 
 <!-- share -->
 
-			<script type="text/javascript">
-			window.shareData = {  
-				"moduleName":"NewsList",
-				"moduleID": "2",
-				"imgUrl": "http://v.lanrenmb.com/tpl/static/attachment/icon/edu/edu_white/9.png", 
-				"timeLineLink": "http://v.lanrenmb.com/index.php?g=Wap&m=Index&a=lists&token=ieydec1420432915&classid=2",
-				"sendFriendLink": "http://v.lanrenmb.com/index.php?g=Wap&m=Index&a=lists&token=ieydec1420432915&classid=2",
-				"weiboLink": "http://v.lanrenmb.com/index.php?g=Wap&m=Index&a=lists&token=ieydec1420432915&classid=2",
-				"tTitle": "懒人业务",
-				"tContent": ""
-			};
-		</script>	
+            <script type="text/javascript">
+            window.shareData = {  
+                "moduleName":"NewsList",
+                "moduleID": "2",
+                "imgUrl": "http://v.lanrenmb.com/tpl/static/attachment/icon/edu/edu_white/9.png", 
+                "timeLineLink": "http://v.lanrenmb.com/index.php?g=Wap&m=Index&a=lists&token=ieydec1420432915&classid=2",
+                "sendFriendLink": "http://v.lanrenmb.com/index.php?g=Wap&m=Index&a=lists&token=ieydec1420432915&classid=2",
+                "weiboLink": "http://v.lanrenmb.com/index.php?g=Wap&m=Index&a=lists&token=ieydec1420432915&classid=2",
+                "tTitle": "懒人业务",
+                "tContent": ""
+            };
+        </script>   
 <script>
-		window.shareData.sendFriendLink=window.shareData.sendFriendLink.replace('http://v.lanrenmb.com','http://v.lanrenmb.com');
-		document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+        window.shareData.sendFriendLink=window.shareData.sendFriendLink.replace('http://v.lanrenmb.com','http://v.lanrenmb.com');
+        document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
         WeixinJSBridge.on('menu:share:appmessage', function (argv) {
          shareHandle('friend');
             WeixinJSBridge.invoke('sendAppMessage', { 
@@ -297,64 +300,14 @@ ul, li { list-style:none; margin:0; padding:0 }
         }, false)
         
         function shareHandle(to) {
-	var submitData = {
-		module: window.shareData.moduleName,
-		moduleid: window.shareData.moduleID,
-		token:'ieydec1420432915',
-		wecha_id:'{wechat_id}',
-		url: window.shareData.sendFriendLink,
-		to:to
-	};
-	$.post('http://v.lanrenmb.com/index.php?g=Wap&m=Share&a=shareData&token=ieydec1420432915&wecha_id={wechat_id}',submitData,function (data) {},'json')
+    var submitData = {
+        module: window.shareData.moduleName,
+        moduleid: window.shareData.moduleID,
+        token:'ieydec1420432915',
+        wecha_id:'{wechat_id}',
+        url: window.shareData.sendFriendLink,
+        to:to
+    };
+    $.post('http://v.lanrenmb.com/index.php?g=Wap&m=Share&a=shareData&token=ieydec1420432915&wecha_id={wechat_id}',submitData,function (data) {},'json')
 }
-        </script>
-    <script src="./jquery.js"></script>
-    <script type="text/javascript">
-        $(function(){
-            $('.only4').click(function(){
-                 $('.answer').css('display','none');
-                $(this).children('.answer').toggle();
-            })
-
-            // alert(123);
-            $('#zhuanye').change(function(){
-                var zhuanye=$(this).val()
-                var type=$('#c_type').val()
-                $.ajax({
-                    type:'post',
-                    url:"{{URL('shiti1')}}",
-                    data:{zhuanye:zhuanye,type:type,_token:"{{ csrf_token() }}"},
-                    // dataType:'json',
-                   success:function(data){
-                        $('#todayList').html(data);
-                        $('body').on('click','.only4',function(){
-                            $('.answer').css('display','none');
-                            $(this).children('.answer').toggle();
-                        });
-                    }
-                })
-            })
-
-            $('#c_type').change(function(){
-                var zhuanye=$('#zhuanye').val()
-                var type=$(this).val()
-                $.ajax({
-                    type:'post',
-                    url:"{{URL('shiti1')}}",
-                    data:{zhuanye:zhuanye,type:type,_token:"{{ csrf_token() }}"},
-                    // dataType:'json',
-                   success:function(data){
-                        $('#todayList').html(data);
-                        $('body').on('click','.only4',function(){
-                            $('.answer').css('display','none');
-                                 $(this).children('.answer').toggle();
-                        });
-                    }
-                })
-            })
-
-        })
-
-    </script>
-</body>
-</html>
+        </script></body></html>

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
         <head>
@@ -35,6 +34,7 @@
         <script src="css/106/iscroll.js" type="text/javascript"></script>
         <script type="text/javascript">
             var myScroll;
+
             function loaded() {
                 myScroll = new iScroll('wrapper', {
                     snap: true,
@@ -71,54 +71,21 @@
 		<div class="clr"></div>
 		</div>
         <div id="insert1"></div>
-        <div>
-        <select name="zhuanye" id="zhuanye">
-             @foreach($message['zhuanye'] as $v)
-             <option value="{{$v['d_name']}}">{{$v['d_name']}}</option>
-             @endforeach
-        </select>
-        <select name="" id="c_type">
-            <option value="基础">基础</option>
-            <option value="进阶">进阶</option>
-            <option value="人资">人资</option>
-            <option value="逻辑">逻辑</option>
-        </select>
-        </div>
         <div id="todayList">
             <ul class="todayList">
-            @foreach($message['shiti'] as $key=>$v)
-            <li class="only4"  style="padding:10px 0 0 0">
-                        <h2>{{$key+1}}. {{$v['c_name']}}&nbsp;&nbsp;&nbsp;   </h2>
-                        <p class="onlyheight"></p>
-                        <span class="icon"></span>
-                        <div class="clr"></div>
-                        <div class='answer' style="display:none"><span class="onlyheight">{{$v['c_answer']}}
-
-<!-- JiaThis Button BEGIN -->
-<div class="jiathis_style" style="float:right;">
-<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank" style="float:left;"></a>
-<a class="jiathis_button_qzone" style="float:left;"></a>
-<a class="jiathis_button_tsina" style="float:left;"></a>
-<a class="jiathis_button_tqq" style="float:left;"></a>
-<a class="jiathis_button_weixin" style="float:left;"></a>
-<a class="jiathis_button_renren" style="float:left;"></a>
-<a class="jiathis_counter_style" style="float:left;"></a>
-</div>
-<script type="text/javascript" >
-var jiathis_config={
-    summary:"",
-    shortUrl:false,
-    hideMore:false
-}
-</script>
-<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
-<!-- JiaThis Button END -->
-
-                        </span>
-                        </div>
-            </li>
-                @endforeach
-            </ul>
+                @foreach($arr['results'] as $key => $v)
+                <li class="only4" style="padding:10px 0 0 0">
+                        <a href="in_map?company=<?= $v['name'] ?>">
+                            <!-- <div class="img"><img src="photo/thumb_54ad3c8c03158.png" /></div> -->
+                            <div class="img"><h1 style="color:red"><?= $key+1 ?></h1></div>
+                            <h2><?= $v['name'] ?></h2>
+                            <p class="onlyheight"><?= $v['address'] ?></p>
+                            <span class="icon">&nbsp;</span>
+                            <div class="clr"></div>
+                        </a>
+                     </li>
+                     @endforeach
+                </ul>
         </div>
         <script>
 
@@ -155,8 +122,7 @@ var jiathis_config={
 © 2016 面试宝典网版权所有</div> 
 <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js" type="text/javascript"></script>
 <br>
-<br>
-<script>
+<br><script>
 function displayit(n){
 	for(i=0;i<4;i++){
 		if(i==n){
@@ -307,54 +273,4 @@ ul, li { list-style:none; margin:0; padding:0 }
 	};
 	$.post('http://v.lanrenmb.com/index.php?g=Wap&m=Share&a=shareData&token=ieydec1420432915&wecha_id={wechat_id}',submitData,function (data) {},'json')
 }
-        </script>
-    <script src="./jquery.js"></script>
-    <script type="text/javascript">
-        $(function(){
-            $('.only4').click(function(){
-                 $('.answer').css('display','none');
-                $(this).children('.answer').toggle();
-            })
-
-            // alert(123);
-            $('#zhuanye').change(function(){
-                var zhuanye=$(this).val()
-                var type=$('#c_type').val()
-                $.ajax({
-                    type:'post',
-                    url:"{{URL('shiti1')}}",
-                    data:{zhuanye:zhuanye,type:type,_token:"{{ csrf_token() }}"},
-                    // dataType:'json',
-                   success:function(data){
-                        $('#todayList').html(data);
-                        $('body').on('click','.only4',function(){
-                            $('.answer').css('display','none');
-                            $(this).children('.answer').toggle();
-                        });
-                    }
-                })
-            })
-
-            $('#c_type').change(function(){
-                var zhuanye=$('#zhuanye').val()
-                var type=$(this).val()
-                $.ajax({
-                    type:'post',
-                    url:"{{URL('shiti1')}}",
-                    data:{zhuanye:zhuanye,type:type,_token:"{{ csrf_token() }}"},
-                    // dataType:'json',
-                   success:function(data){
-                        $('#todayList').html(data);
-                        $('body').on('click','.only4',function(){
-                            $('.answer').css('display','none');
-                                 $(this).children('.answer').toggle();
-                        });
-                    }
-                })
-            })
-
-        })
-
-    </script>
-</body>
-</html>
+        </script></body></html>

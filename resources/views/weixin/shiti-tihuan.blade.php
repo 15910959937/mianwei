@@ -1,8 +1,8 @@
             <ul class="todayList">
             <?php if($shiti !=''){ ?>
-                  @foreach($shiti as $v)
+                  @foreach($shiti as $key=>$v)
                         <li class="only4"  style="padding:10px 0 0 0">
-                              <h2>{{$v['c_name']}}&nbsp;&nbsp;&nbsp;   </h2>
+                              <h2>{{$key+1}}.{{$v['c_name']}}&nbsp;&nbsp;&nbsp;   </h2>
                               <p class="onlyheight"></p>
                               <span class="icon"></span>
                               <div class="clr"></div>
@@ -11,7 +11,7 @@
                    @endforeach
                    <?php }else{ ?>
                         <li class="only4"  style="padding:10px 0 0 0">
-                              <h2>暂时无相关试题&nbsp;&nbsp;&nbsp;   </h2>
+                              <h2>暂时无相关试题</h2>
                               <p class="onlyheight"></p>
                               <span class="icon"></span>
                               <div class="clr"></div>
