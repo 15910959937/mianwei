@@ -13,10 +13,10 @@
 //use Illuminate\Support\Facades\Input;
 
 Route::any('info',"IndexController@index");
-Route::any('/',"weixinController@index");
-Route::get('shiti',"weixinController@shiti");
-Route::any('shiti1',"weixinController@shiti1");
-Route::any('collage',"weixinController@collage");
+Route::any('/',"WeixinController@index");
+Route::get('shiti',"WeixinController@shiti");
+Route::any('shiti1',"WeixinController@shiti1");
+Route::any('collage',"WeixinController@collage");
 
 //Route::get('/',function(){
 //    return Input::get('name');
